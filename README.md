@@ -1,19 +1,33 @@
-## About this project 🏁
+## Overview  
+This application is built on a microservices architecture, integrating three core business services:  
 
-#### An application based on three business services :
+1. **Customer Service**  
+2. **Inventory Service**  
+3. **Billing Service**  
 
-- Customer Service
-- Inventory Service
-- Billing Service
-- Authentication Service using Spring Security and JWT :
-  This service manages :
-  - Authentication
-  - Users
-  - Roles (USER, ADMIN, CUSTOMER_MANAGER, PRODUCT_MANAGER, BILLS_MANAGER) A user can have multiple roles, and each role can be assigned to multiple users.
+It uses Spring Security with JWT for authentication and role-based access control, along with Spring Cloud services for service orchestration.  
 
-#### Service orchestration is handled via Spring Cloud technical services :
+---
 
-- Spring Cloud Gateway Service as a proxy service
-- Eureka Registry Service as a directory for service registration and discovery in the architecture
-- Hystrix Circuit Breaker
-- Hystrix Dashboard
+## Key Features  
+
+### 1. **Authentication Service**  
+- Token-based authentication using JWT.  
+- User and role management with predefined roles (`USER`, `ADMIN`, `CUSTOMER_MANAGER`, `PRODUCT_MANAGER`, `BILLS_MANAGER`).  
+- Flexible role assignments.  
+
+### 2. **Core Business Services**  
+- **Customer Service** for managing customer data.  
+- **Inventory Service** for product and inventory management.  
+- **Billing Service** for processing financial transactions.  
+
+### 3. **Service Orchestration**  
+- **Spring Cloud Gateway:** Proxy service and entry point.  
+- **Eureka Registry:** Service registration and discovery.  
+- **Hystrix Circuit Breaker:** Fault tolerance and resilience.  
+- **Hystrix Dashboard:** Real-time monitoring of circuit breakers.  
+
+---
+
+## Architecture  
+The microservices architecture ensures independent scalability and deployment for each service. Spring Cloud services facilitate seamless communication, fault tolerance, and monitoring.  
